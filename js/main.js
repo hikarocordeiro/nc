@@ -4,7 +4,7 @@ var Narnia = {};
 
     var timesProcessados = 0;
     var processado = false;
-    var times = ['perebas-forever', 'narnia-de-munique', 'sao-bacon-fc', 'goblins-team', 'boletos-fc', 'petrinhus-fc', 'xutebol-club'];
+    var times = ['luizim-s2-verdao-f-c', 'ttigela', 'belchior-f-c', 'tufonious-fc', 'zidane-pinheiro', 'xutebol-club', 'niqfc', 'todao-tean', 'odonto-ceres', 'pomperon', 'wjv', 'thortora-fc'];
     var atletas_pontuados = [];
     var total_pontos = 0.00;
     var classeOrdenacao = '.pontoparcial';
@@ -37,7 +37,7 @@ var Narnia = {};
                 if (data && data.responseJSON && data.responseJSON.atletas) {
                   atletas_pontuados = data.responseJSON.atletas;
                 } else {
-                    $('#info-mercado').html('Tem parcial nao tiozao!');
+                    $('#info-mercado').html('Sem Parcial!');
                     classeOrdenacao = '.ponto';
                 }
                 for (var i = 0; i < times.length; i++) {
@@ -110,7 +110,7 @@ var Narnia = {};
 
         var parent = $(menorObj).parent().parent();
         parent.addClass('paga-coca');
-        $.get('https://api.riffsy.com/v1/search?tag=coca-cola&key=LIVDSRZULELA', function (data) {
+        $.get('https://api.riffsy.com/v1/search?tag=loser&key=LIVDSRZULELA', function (data) {
             parent.find('.coca').append('<img src="' + data.results[Math.floor(Math.random() * 19)].media[0].gif.url + '" style="height: 100px;">')
         });
     }
